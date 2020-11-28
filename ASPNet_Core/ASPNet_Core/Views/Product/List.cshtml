@@ -1,0 +1,14 @@
+﻿@model ASPNet_Core.ViewModels.ProductList
+
+<form asp-controller="Product" asp-action="List" >
+    <p>
+        Title: <input type="text" name="searchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+@foreach(var product in Model.GetProducts)
+{ 
+    <partial name="_ProductList"  model="product"/>
+}
+

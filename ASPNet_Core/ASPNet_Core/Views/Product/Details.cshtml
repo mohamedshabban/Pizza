@@ -1,0 +1,8 @@
+﻿@model Product
+
+<div>
+    <img src="@Model.ImageUrl"  style="width:60%" />
+    <p>@Model.Name</p>
+</div>
+
+<a class="btn btn-dark" asp-controller="Product" asp-action="List">All Products</a>

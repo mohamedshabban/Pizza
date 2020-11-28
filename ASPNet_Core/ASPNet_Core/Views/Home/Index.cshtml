@@ -1,0 +1,13 @@
+﻿@model ASPNet_Core.ViewModels.HomeViewModel
+
+@{
+    ViewData["Title"] = "Home";
+}
+<partial name="_Home"/>
+
+<div class="row">
+    @foreach (var product in @Model.ProductsOfTheWeek)
+    {
+        <partial name="_ProductList" model="product"/>      
+    }
+</div>
